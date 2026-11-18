@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Quizora home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 4.5 6.8v7.1c0 4 3.1 6.4 7.5 7.1 4.4-.7 7.5-3.1 7.5-7.1V6.8L12 3Z"/><path d="M9.2 12.2 11 14l4-4.4"/></svg>
+          </span>
+          <span>Quizora</span>
+        </a>
+        <button class="profile-button" type="button" aria-label="Open profile">
+          <span class="avatar">T</span>
+          <span class="profile-name">Thiru</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg>
+        </button>
+      </header>
+
+      <section class="quiz-card" id="quizCard" aria-live="polite">
+        <div class="quiz-meta">
+          <div>
+            <p class="eyebrow">General knowledge</p>
+            <h1 id="questionTitle">Loading question...</h1>
+          </div>
+          <div class="timer" aria-label="Time remaining">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 3h6"/></svg>
+            <span id="timerText">01:00</span>
+          </div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress-info">
+            <span id="questionCount">Question 1 of 5</span>
+            <span id="progressPercent">20%</span>
+          </div>
+          <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+        </div>
+
+        <div class="answers" id="answers"></div>
+
+        <footer class="card-footer">
+          <button class="secondary-button" id="prevButton" type="button">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m12 5-5 5 5 5"/></svg>
+            Previous
+          </button>
+          <button class="primary-button" id="nextButton" type="button">
+            <span>Next question</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5 5 5-5 5"/></svg>
+          </button>
+        </footer>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

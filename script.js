@@ -11,7 +11,7 @@ function syncIntroVideoMotion() {
   }
 
   introVideo.play().catch((error) => {
-    if (error.name !== "NotAllowedError") {
+    if (error.name !== "NotAllowedError" && error.name !== "AbortError") {
       console.error("Could not play the hero video.", error);
     }
   });

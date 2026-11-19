@@ -3,62 +3,172 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quizora</title>
+    <meta name="theme-color" content="#10110f" />
+    <meta name="description" content="Thiru R is a software engineer focused on Python, AI applications, front-end development and CI/CD." />
+    <title>Thiru R — Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="app-shell">
-      <header class="topbar">
-        <a class="brand" href="#" aria-label="Quizora home">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 3 4.5 6.8v7.1c0 4 3.1 6.4 7.5 7.1 4.4-.7 7.5-3.1 7.5-7.1V6.8L12 3Z"/><path d="M9.2 12.2 11 14l4-4.4"/></svg>
-          </span>
-          <span>Quizora</span>
-        </a>
-        <button class="profile-button" type="button" aria-label="Open profile">
-          <span class="avatar">T</span>
-          <span class="profile-name">Thiru</span>
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg>
-        </button>
-      </header>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Thiru, home">thiru<span>®</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
 
-      <section class="quiz-card" id="quizCard" aria-live="polite">
-        <div class="quiz-meta">
-          <div>
-            <p class="eyebrow">General knowledge</p>
-            <h1 id="questionTitle">Loading question...</h1>
-          </div>
-          <div class="timer" aria-label="Time remaining">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 3h6"/></svg>
-            <span id="timerText">01:00</span>
+    <main>
+      <section class="hero section-wrap" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> SOFTWARE ENGINEER <span class="eyebrow-sep">/</span> CHENNAI, IN</p>
+          <h1>Building things<br />for a <span class="hero-highlight">better</span><br />digital world<span class="hero-period">.</span></h1>
+          <div class="hero-bottom">
+            <p class="hero-intro">Hey, I’m Thiru — an engineer who enjoys turning curious ideas into thoughtful software.</p>
+            <a class="round-link" href="#about" aria-label="Scroll to about section"><span>↓</span></a>
           </div>
         </div>
-
-        <div class="progress-wrap">
-          <div class="progress-info">
-            <span id="questionCount">Question 1 of 5</span>
-            <span id="progressPercent">20%</span>
-          </div>
-          <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+        <div class="hero-video-bg" aria-hidden="true">
+          <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+            <source src="assets/thiru-intro.mp4" type="video/mp4" />
+          </video>
         </div>
+        <div class="hero-index"><span>01</span><span class="index-line"></span><span>SCROLL TO EXPLORE</span></div>
+      </section>
 
-        <div class="answers" id="answers"></div>
+      <div class="ticker" aria-label="Areas of interest">
+        <div class="ticker-track" aria-hidden="true">
+          <span>SOFTWARE ENGINEERING</span><i>✳</i><span>AI APPLICATIONS</span><i>✳</i><span>PYTHON</span><i>✳</i><span>CI/CD</span><i>✳</i>
+          <span>SOFTWARE ENGINEERING</span><i>✳</i><span>AI APPLICATIONS</span><i>✳</i><span>PYTHON</span><i>✳</i><span>CI/CD</span><i>✳</i>
+        </div>
+      </div>
 
-        <footer class="card-footer">
-          <button class="secondary-button" id="prevButton" type="button">
-            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m12 5-5 5 5 5"/></svg>
-            Previous
-          </button>
-          <button class="primary-button" id="nextButton" type="button">
-            <span>Next question</span>
-            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5 5 5-5 5"/></svg>
-          </button>
-        </footer>
+      <section class="about section-wrap section-pad" id="about">
+        <div class="section-label"><span>01 / ABOUT ME</span><span class="label-rule"></span></div>
+        <div class="about-grid">
+          <h2>Curiosity meets<br /><span class="text-muted">a line of code.</span></h2>
+          <div class="about-copy">
+            <p class="about-lead">I’m a software engineer intern and Electronics &amp; Communication Engineering student who loves building useful, reliable digital experiences.</p>
+            <p>From responsive interfaces to AI-powered tools and automated delivery pipelines, I like working across the stack, learning fast, and making the details count. Currently finishing my degree at Sathyabama Institute of Science and Technology.</p>
+            <div class="about-facts">
+              <div><strong>8.5<span>/10</span></strong><small>ACADEMIC CGPA</small></div>
+              <div><strong>5<span>+</span></strong><small>QR CODES / SCAN</small></div>
+              <div><strong>100<span>+</span></strong><small>FRAMES / MINUTE</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="work section-wrap section-pad" id="work">
+        <div class="section-label"><span>02 / SELECTED WORK</span><span class="label-rule"></span></div>
+        <div class="section-heading">
+          <h2>Things I’ve<br /><span class="text-muted">put in motion.</span></h2>
+          <p>A few experiments and real-world builds, each with a little something learned along the way.</p>
+        </div>
+        <div class="project-list">
+          <article class="project-card project-featured reveal">
+            <div class="project-topline"><span>01 — LIVE PROJECT</span><span>WEBHOOKS / CI/CD</span></div>
+            <div class="project-content">
+              <div><p class="project-kind">SOFTWARE ENGINEERING · CHERUBIUM AI INFOSOFT</p><h3>guruji<span>.support</span></h3></div>
+              <p class="project-description">Helping keep a live web support platform moving with automated builds, deployment workflows, and a dependable team development process.</p>
+            </div>
+            <div class="project-footer"><div class="tag-list"><span>GitHub</span><span>Jenkins</span><span>Webhooks</span><span>CI/CD</span></div><span class="project-arrow" aria-hidden="true">↗</span></div>
+          </article>
+          <div class="project-grid">
+            <article class="project-card project-ai reveal">
+              <div class="project-topline"><span>02 — AI APPLICATION</span><span>NLP</span></div>
+              <div class="project-visual video-visual" aria-hidden="true"><div class="video-window"><span class="window-dots">● ● ●</span><span class="play-icon">▶</span><span class="waveform"></span></div><span class="visual-caption">WATCH LESS. TAKE AWAY MORE.</span></div>
+              <p class="project-kind">AI · PROMPT ENGINEERING</p><h3>YouTube Video<br />Summarizer</h3>
+              <p class="project-description">Turns video content into useful takeaways with NLP and prompt engineering — improving summary relevance by 30% and reducing manual review time by 60%.</p>
+              <div class="tag-list"><span>NLP</span><span>Prompt design</span><span>API integration</span></div>
+            </article>
+            <article class="project-card project-vision reveal">
+              <div class="project-topline"><span>03 — COMPUTER VISION</span><span>PYTHON</span></div>
+              <div class="project-visual scanner-visual" aria-hidden="true"><div class="scan-frame"><span class="qr-code">▦</span><span class="scan-line"></span><span class="scan-cross">+</span></div><span class="scan-count">05 DETECTED</span></div>
+              <p class="project-kind">REAL-TIME · OPENCV</p><h3>Multi-QR Scanner<br />System</h3>
+              <p class="project-description">Scans 5+ QR codes simultaneously from a live camera feed, then logs results to Excel with timestamps and duplicate detection.</p>
+              <div class="tag-list"><span>Python</span><span>OpenCV</span><span>Pyzbar</span></div>
+            </article>
+          </div>
+          <article class="project-card project-netflix reveal">
+            <div class="netflix-mark" aria-hidden="true">N</div>
+            <div class="netflix-copy"><p class="project-kind">FRONT-END · RESPONSIVE DESIGN</p><h3>Netflix Clone Website</h3><p>A responsive streaming-inspired interface with 10+ reusable UI components, designed to feel at home on mobile, tablet, and desktop.</p></div>
+            <div class="tag-list"><span>HTML5</span><span>CSS3</span><span>Responsive UI</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="experience section-wrap section-pad" id="experience">
+        <div class="section-label"><span>03 / THE JOURNEY</span><span class="label-rule"></span></div>
+        <div class="journey-grid">
+          <div><h2>Learning by<br /><span class="text-muted">doing.</span></h2><p class="journey-note">Good work happens when you stay curious, work together, and keep shipping.</p></div>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <span class="timeline-date">PROFESSIONAL EXPERIENCE · 1 MONTH</span>
+              <h3>Software Engineer Intern</h3>
+              <p class="timeline-company">Cherubium AI Infosoft</p>
+              <p>Contributed to a live, real-time project with a collaborative development team. Worked with Git and GitHub pull requests, connected GitHub webhooks to Jenkins pipelines, and tested and debugged features for a stable live environment.</p>
+              <div class="tag-list"><span>Git</span><span>GitHub</span><span>Jenkins</span><span>Webhooks</span></div>
+            </article>
+            <article class="timeline-item education-item reveal">
+              <span class="timeline-date">AUG 2022 — AUG 2026</span>
+              <h3>B.E. Electronics &amp; Communication Engineering</h3>
+              <p class="timeline-company">Sathyabama Institute of Science and Technology · Chennai</p>
+              <p>CGPA 8.5 / 10, up to 7th semester.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbox section-wrap section-pad" id="toolbox">
+        <div class="section-label"><span>04 / MY TOOLBOX</span><span class="label-rule"></span></div>
+        <h2>What I work <span class="text-muted">with.</span></h2>
+        <div class="toolbox-grid">
+          <div class="tool-group"><span class="tool-number">01</span><h3>Languages</h3><p>Python <i>·</i> C <i>·</i> Embedded C</p></div>
+          <div class="tool-group"><span class="tool-number">02</span><h3>Web &amp; data</h3><p>HTML5 <i>·</i> CSS3 <i>·</i> MySQL</p></div>
+          <div class="tool-group"><span class="tool-number">03</span><h3>Build &amp; ship</h3><p>Git <i>·</i> GitHub <i>·</i> Jenkins <i>·</i> CI/CD</p></div>
+          <div class="tool-group"><span class="tool-number">04</span><h3>AI &amp; vision</h3><p>OpenCV <i>·</i> Pyzbar <i>·</i> NLP <i>·</i> Postman</p></div>
+          <div class="tool-group"><span class="tool-number">05</span><h3>Embedded</h3><p>Arduino <i>·</i> Sensors <i>·</i> Microcontrollers</p></div>
+          <div class="tool-group"><span class="tool-number">06</span><h3>Also learning</h3><p>Prompt engineering <i>·</i> API integration</p></div>
+        </div>
+      </section>
+
+      <section class="credentials section-wrap section-pad">
+        <div class="section-label"><span>05 / CONTINUOUS LEARNING</span><span class="label-rule"></span></div>
+        <div class="credentials-grid">
+          <h2>Curious, by<br /><span class="text-muted">nature.</span></h2>
+          <ul class="credential-list">
+            <li><span>01</span><div><strong>Postman API Fundamentals</strong><small>Student Expert</small></div><span class="credential-arrow">↗</span></li>
+            <li><span>02</span><div><strong>AWS Community Builders</strong><small>7-Day Bootcamp on HTML &amp; CSS</small></div><span class="credential-arrow">↗</span></li>
+            <li><span>03</span><div><strong>AI Workshop</strong><small>CodeBind Technologies, Trichy · June 2024</small></div><span class="credential-arrow">↗</span></li>
+            <li><span>04</span><div><strong>Custom IC Chip Design for Manufacturability</strong><small>VIT Chennai</small></div><span class="credential-arrow">↗</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact section-wrap" id="contact">
+        <div class="contact-orb" aria-hidden="true"></div>
+        <p class="eyebrow"><span class="status-dot"></span> HAVE A GOOD ONE IN MIND?</p>
+        <h2>Let’s make<br />it <span>happen.</span></h2>
+        <a class="contact-link" href="mailto:thiruveanghat2005@gmail.com">thiruveanghat2005@gmail.com <span aria-hidden="true">↗</span></a>
+        <div class="contact-bottom">
+          <span>CHENNAI, INDIA · LET’S CONNECT</span>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/thiru-veanghat06" target="_blank" rel="noreferrer">LINKEDIN ↗</a>
+            <a href="https://github.com/thiruveanghat" target="_blank" rel="noreferrer">GITHUB ↗</a>
+          </div>
+        </div>
       </section>
     </main>
+    <footer class="site-footer section-wrap"><a class="wordmark" href="#home">thiru<span>®</span></a><span>DESIGNED &amp; BUILT WITH CURIOSITY · © <span id="year"></span></span><a href="#home">BACK TO TOP ↑</a></footer>
     <script src="script.js"></script>
   </body>
 </html>
